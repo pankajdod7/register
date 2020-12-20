@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+{% load crispy_forms_tags %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <!-- CSS only -->
+<!-- Latest compiled and minified CSS -->
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+      <style>
+    h2{
+     color: red;
+     font-weight:bolder;
+     font-family:ariel;
+    }
+    body{
+    background-color: skyblue;
+    }
+
+</style>
+
+</head>
+<body>
+
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-8">
+
+            <div class="form-group col-md-6">
+                <h2>LOGIN</h2>
+                </div>
+            <form method="post">
+
+                {% csrf_token %}
+
+
+                <div class="form-group col-md-6">
+                    <label>Enter Username</label>
+                    <input class="form-control text-info" type="text" name="uname">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label>Enter Password</label>
+                   <input type="password" name="pass" class="form-control">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <input type="submit" class="btn btn-primary btn-md">
+                    <span class="text-danger">
+                    {% for msg in messages %}
+                    {{msg}}
+                    {% endfor %}
+                    </span>
+                </div>
+
+
+
+            </form>
+        </div>
+        <div class="col-md-2"></div>
+    </div>
+</div>
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<!-- Popper JS -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+
+</body>
+</html>
