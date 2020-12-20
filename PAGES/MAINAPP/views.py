@@ -79,3 +79,6 @@ def view3(request):
     resp = render(request,'MAINAPP/v3.html',{'count':cnt})
     resp.set_cookie('visits',str(cnt))
     return resp
+
+def view4():
+    pass
