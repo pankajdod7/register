@@ -81,3 +81,6 @@ def view3(request):
     return resp
 def view4(request):
     return render (request)
+
+def view5():
+    pass
